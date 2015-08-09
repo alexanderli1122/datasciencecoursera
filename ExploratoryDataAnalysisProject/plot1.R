@@ -8,4 +8,6 @@ as.POSIXct(subsetdata[,2],format="%d/%m/%Y %H:%M:%S")->subsetdata[,2]
 
 lapply(subsetdata[3:8],as.numeric)->subsetdata[3:8]
 
+png(file="plot1.png")
 hist(subsetdata[,3],xlab = "Global Active Power (kilowatts)",ylab="Frequency",main="Global Active Power (kilowatts)",col = "red")
+dev.off()
